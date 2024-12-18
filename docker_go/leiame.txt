@@ -1,0 +1,16 @@
+go mod init github.com/carlosatleticano/docker_go
+
+go run main.go
+
+docker-compose up -d  // criar o docker 
+
+docker-compose ps  // ver o docker criado
+
+docker-compose exec goapp bash  // acessar o docker
+
+docker build -t carlosatleticano/docker_go:latest -f Dockerfile.prod  .
+
+docker run --rm -p 8000:8000 carlosatleticano/docker_go:latest   // rodar o docker que criei
+
+
+
